@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <title>Home</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: aqua;
+
+        }
+
+        .butn {
+            transition: transform .5s ease;
+        }
+
+        .butn:hover {
+            transform: scale(1.2);
+
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .heading {
+            position: absolute;
+            font-size: 65px;
+            top: 0;
+            letter-spacing: 5px;
+            margin-left: 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .heading2 {
+            position: absolute;
+            font-size: 60px;
+            top: 0;
+            margin-left: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my-bar my-black my-padding my-hide-small">
+        <a href="index.html" class="my-bar-item my-margin-left"><i class="fa fa-home my-xxlarge"
+                aria-hidden="true"></i></a>
+        <a href="about.php" class="my-bar-item my-right">About Us</a>
+        <a href="selectmoney.php" class="my-bar-item my-right">Transfer Money</a>
+        <a href="viewtransactions.php" class="my-bar-item my-right">View Transactions</a>
+        <a href="viewcustomers.php" class="my-bar-item my-right">View Customers</a>
+    </div>
+
+    <!-- responsive -->
+    <div class="my-bar my-black my-padding my-hide-large" style="display:flex; text-align: center;">
+        <a href="index.html" class="my-bar-item "><i class="fa fa-home my-xlarge my-text-aqua"
+                aria-hidden="true"></i></a>
+        <a href="viewcustomers.php" class="my-bar-item my-small">View Customers</a>
+        <a href="viewtransactions.php" class="my-bar-item my-small">View Transactions</a>
+        <a href="selectmoney.php" class="my-bar-item my-small">Transfer Money</a>
+        <a href="about.php" class="my-bar-item my-small">About Us</a>
+    </div>
+
+
+    <div class="my-black ">
+        <p class="heading my-text-white my-hide-small">
+            THE SPARKS<br>
+            BANK
+        </p>
+
+        <!-- responsive heading -->
+        <p class="heading2 my-text-white my-hide-large">
+            THE SPARKS<br>
+            BANK
+        </p>
+
+        <img src="images/home2.jpg" class="my-hide-small"
+            style="object-fit: cover; height: 180px; width:100%; opacity: .3;" alt="">
+        <img src="images/home2.jpg" class="my-hide-large"
+            style="object-fit: cover; height: 180px; width:100%; opacity: .3;" alt="">
+
+    </div>
+    <div class="my-black">
+        <marquee behavior="alternate" onmouseover='this.stop()' onmouseout='this.start()' direction="">WE ARE OPEN
+            24x7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our features:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*We register
+            customers at an instant*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*We transfer money
+            24x7*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Customer help is just one call away*</marquee>
+    </div>
+
+    <p class="my-center my-hide-small" style=" max-width: 800px; margin: 50px auto;">Our bank is committed to providing
+        our customers
+        with the highest level of service and the most innovative banking products possible.</p>
+
+    <!-- responsive -->
+    <p class="my-center my-hide-large my-padding" style="font-size: 14px; max-width: 800px; margin: 20px auto;">Our bank
+        is committed to providing our customers
+        with the highest level of service and the most innovative banking products possible.</p>
+
+    <div class="content my-hide-small" style="margin-top: 50px;">
+        <div class="my-row">
+            <div class="my-third my-center">
+                <img src="images/undraw_male_avatar_323b.svg" style="height: 150px;" alt=""><br><br>
+                <a href="viewcustomers.php" class="my-btn my-black my-round butn">View Customers</a>
+            </div>
+            <div class="my-third  my-center">
+                <img src="images/undraw_transfer_money_rywa.svg" style="height: 150px;" alt=""><br><br>
+                <a href="selectmoney.php" class="my-btn my-black my-round butn">Transfer Money</a>
+            </div>
+            <div class="my-third my-center">
+                <img src="images/undraw_savings_re_eq4w.svg" style="height: 150px;" alt=""><br><br>
+                <a href="viewtransactions.php" class="my-btn my-black my-round butn">View Transactions</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content my-hide-large" style="margin-top: 10px; margin-bottom: 80px;">
+        <div class="my-row">
+            <div class="my-third my-center my-padding-24">
+                <img src="images/undraw_male_avatar_323b.svg" style="height: 120px;" alt=""><br>
+                <a href="viewcustomers.php" class="my-btn my-black my-round butn" style="margin-top: 5px;">View
+                    Customers</a>
+            </div>
+            <div class="my-third  my-center my-padding-24">
+                <img src="images/undraw_transfer_money_rywa.svg" style="height: 120px;" alt=""><br>
+                <a href="selectmoney.php" class="my-btn my-black my-round butn" style="margin-top: 5px;">Transfer
+                    Money</a>
+            </div>
+            <div class="my-third my-center my-padding-24">
+                <img src="images/undraw_savings_re_eq4w.svg" style="height: 120px;" alt=""><br>
+                <a href="viewtransactions.php" class="my-btn my-black my-round butn" style="margin-top: 5px;">View
+                    Transactions</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>
+            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o"></i> <span
+                class="my-small">abhigyanritiz63@gmail.com</span> &nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-linkedin-square"></i> <span class="my-small">www.linkedin.com/in/abhigyan-borah</span>
+            &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> <span
+                class="my-small">https://github.com/AbhigyanBorah </span>
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>
