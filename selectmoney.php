@@ -61,7 +61,8 @@
             animation: animate2 3s ease-out forwards;
 
         }
-@keyframes animate2 {
+
+        @keyframes animate2 {
             0% {
                 letter-spacing: -12px;
             }
@@ -78,6 +79,7 @@
                 letter-spacing: 2px;
             }
         }
+
         .footer {
             position: fixed;
             left: 0;
@@ -133,12 +135,12 @@
                     <div class="my-third my-center my-padding">
                         From: <?php
                                 if (isset($_GET["id"])) {
-                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round">';
+                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round required" required>';
                                     echo '<option selected>' . $acc . '</option>';
                                     echo '</select>';
                                 } else {
-                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round">';
-                                    echo '<option disabled selected>Select account no.</option>';
+                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round" required>';
+                                    echo '<option value="" disabled="disabled" selected>Select account no.</option>';
                                     $sql2 = mysqli_query($link, "Select account_no from customers");
                                     while ($s1 = mysqli_fetch_array($sql2)) {
                                         echo '<option> ' . $s1[0] . '  </option>';
@@ -149,11 +151,11 @@
                     </div>
                     <div class="my-third my-center my-padding">
                         To: <?php
-                            echo '<select type="text" name="receiver" class="my-padding my-white my-round my-center">';
-                            echo '<option disabled selected>Select account no.</option>';
+                            echo '<select type="text" name="receiver" class="my-padding my-white my-round my-center" required>';
+                            echo '<option value="" disabled="disabled" selected>Select account no.</option>';
                             $sql2 = mysqli_query($link, "Select account_no from customers");
                             while ($s1 = mysqli_fetch_array($sql2)) {
-                                echo '<option> ' . $s1[0] . '  </option>';
+                                echo '<option required> ' . $s1[0] . '  </option>';
                             }
                             echo '</select>';
                             ?>
@@ -166,18 +168,18 @@
             </form>
         </div>
 
-        <div class="my-container my-padding-48 my-hide-large">
+        <div class="my-container my-padding my-hide-large">
             <form action="transfermoney.php" method="post">
                 <div class="my-row" style="max-width: 900px; margin:0 auto">
-                    <div class="my-third my-center my-padding">
+                    <div class="my-third my-center">
                         From: <?php
                                 if (isset($_GET["id"])) {
-                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round">';
+                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round" required>';
                                     echo '<option selected>' . $acc . '</option>';
                                     echo '</select>';
                                 } else {
-                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round">';
-                                    echo '<option disabled selected>Select account no.</option>';
+                                    echo '<select type="text" name="sender" class="my-padding my-white my-center my-round" required>';
+                                    echo '<option value="" disabled="disabled" selected>Select account no.</option>';
                                     $sql2 = mysqli_query($link, "Select account_no from customers");
                                     while ($s1 = mysqli_fetch_array($sql2)) {
                                         echo '<option> ' . $s1[0] . '  </option>';
@@ -188,17 +190,17 @@
                     </div>
                     <div class="my-third my-center my-padding">
                         To: &nbsp;&nbsp;&nbsp; <?php
-                            echo '<select type="text" name="receiver" class="my-padding my-white my-round my-center">';
-                            echo '<option disabled selected>Select account no.</option>';
-                            $sql2 = mysqli_query($link, "Select account_no from customers");
-                            while ($s1 = mysqli_fetch_array($sql2)) {
-                                echo '<option> ' . $s1[0] . '  </option>';
-                            }
-                            echo '</select>';
-                            ?>
+                                                echo '<select type="text" name="receiver" class="my-padding my-white my-round my-center" required>';
+                                                echo '<option value="" disabled="disabled" selected>Select account no.</option>';
+                                                $sql2 = mysqli_query($link, "Select account_no from customers");
+                                                while ($s1 = mysqli_fetch_array($sql2)) {
+                                                    echo '<option> ' . $s1[0] . '  </option>';
+                                                }
+                                                echo '</select>';
+                                                ?>
                     </div>
                     <div class="my-third my-center my-padding">
-                        <input type="submit" name="submit" value="Proceed >>" style="width: 60%;" class="my-btn my-black my-round butn">
+                        <input type="submit" name="submit" value="Proceed >>" style="width: 40%;" class="my-btn my-black my-round butn">
                         <!-- <a href="transfermoney.php" style="width: 80%;" class="my-btn my-black my-round">Proceed >></a> -->
                     </div>
                 </div>
@@ -206,17 +208,24 @@
         </div>
 
         <div class="my-container my-content my-padding my-center">
-            <img src="images/undraw_transfer_money_rywa.svg" alt="" style="width: 40%; transform: scaleX(-1);">
+            <img class="my-hide-small" src="images/undraw_transfer_money_rywa.svg" alt="" style="width: 40%; transform: scaleX(-1);">
+            <img class="my-hide-large" src="images/undraw_transfer_money_rywa.svg" alt="" style="width: 50%; transform: scaleX(-1);">
+
         </div>
     </div>
 
     <div class="footer">
-        <p>
-            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o"></i> <span
-                class="my-small">abhigyanritiz63@gmail.com</span> &nbsp;&nbsp;&nbsp;&nbsp;<i
-                class="fa fa-linkedin-square"></i> <span class="my-small">www.linkedin.com/in/abhigyan-borah</span>
-            &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> <span
-                class="my-small">https://github.com/AbhigyanBorah </span>
+        <p class="my-hide-small">
+            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o"></i> <span class="my-small">abhigyanritiz63@gmail.com</span> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-linkedin-square"></i> <span class="my-small">www.linkedin.com/in/abhigyan-borah</span>
+            &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> <span class="my-small">https://github.com/AbhigyanBorah </span>
+        </p>
+
+        <p class="my-hide-large">
+            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">abhigyanritiz63@gmail.com</span> <br><i
+                class="fa fa-linkedin-square" style="font-size: 10px;"></i> <span style="font-size: 10px;">www.linkedin.com/in/abhigyan-borah</span>
+           <br> <i class="fa fa-github" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">https://github.com/AbhigyanBorah </span>
         </p>
 
     </div>

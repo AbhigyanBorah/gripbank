@@ -131,7 +131,7 @@
                     $sql = "select * from transaction order by id desc";
                     $result = mysqli_query($link, $sql);
                     while ($row = mysqli_fetch_array($result)) {
-                        echo '<tr class="my-white" style="border-width: 0px;">';
+                        echo '<tr class="my-white  my-hover-light-blue" style="border-width: 0px;">';
                         echo '<td style="text-align:center;">' . $row[0] . '</td>';
                         echo '<td style="text-align:center;">' . $row[1] . '</td>';
                         echo '<td style="text-align:center;">' . $row[2] . '</td>';
@@ -182,19 +182,26 @@
 
                 </tbody>
             </table>
-            <br>
+            <br><br><br><br><br>
         </div>
 
 
 
     </div>
     <div class="footer">
-        <p>
+        <p class="my-hide-small">
             This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o"></i> <span
                 class="my-small">abhigyanritiz63@gmail.com</span> &nbsp;&nbsp;&nbsp;&nbsp;<i
                 class="fa fa-linkedin-square"></i> <span class="my-small">www.linkedin.com/in/abhigyan-borah</span>
             &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> <span
                 class="my-small">https://github.com/AbhigyanBorah </span>
+        </p>
+        <p class="my-hide-large">
+            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">abhigyanritiz63@gmail.com</span> <br><i
+                class="fa fa-linkedin-square" style="font-size: 10px;"></i> <span style="font-size: 10px;">www.linkedin.com/in/abhigyan-borah</span>
+           <br> <i class="fa fa-github" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">https://github.com/AbhigyanBorah </span>
         </p>
 
     </div>
@@ -219,3 +226,12 @@
 </body>
 
 </html>
+<?php
+
+if(isset($_GET["ok"]))
+{
+    echo '<script>alert("Transaction Successful")</script>';
+}
+
+
+?>

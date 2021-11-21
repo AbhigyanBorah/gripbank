@@ -74,12 +74,20 @@
 </head>
 
 <body>
-    <div class="my-bar my-black my-padding">
+    <div class="my-bar my-black my-padding my-hide-small">
         <a href="index.html" class="my-bar-item my-margin-left"><i class="fa fa-home my-xlarge" aria-hidden="true"></i></a>
         <a href="about.php" class="my-bar-item my-right">About Us</a>
         <a href="selectmoney.php" class="my-bar-item my-right my-xlarge my-text-aqua">Transfer Money</a>
         <a href="viewtransactions.php" class="my-bar-item my-right">View Transactions</a>
         <a href="viewcustomers.php" class="my-bar-item my-right ">View Customers</a>
+    </div>
+
+    <div class="my-bar my-black my-padding my-hide-large" style="display:flex; text-align: center;">
+        <a href="index.html" class="my-bar-item "><i class="fa fa-home my-xlarge " aria-hidden="true"></i></a>
+        <a href="viewcustomers.php" class="my-bar-item my-small">View Customers</a>
+        <a href="viewtransactions.php" class="my-bar-item my-small">View Transactions</a>
+        <a href="selectmoney.php" class="my-bar-item my-small my-text-aqua">Transfer Money</a>
+        <a href="about.php" class="my-bar-item my-small">About Us</a>
     </div>
 
     <div class="my-auto my-margin-top">
@@ -160,7 +168,7 @@
                 </p>
             </div>
         </div><br><br>
-        <div class="my-container my-padding my-center">
+        <div class="my-container my-padding my-center my-hide-small">
             <form action="transfer.php" method="POST">
                 <input type="text" hidden name="sender" id="" <?php echo 'value="'.$acc1.'"';?>></input>
                 <input type="text" hidden name="receiver" id="" <?php echo 'value="'.$acc2.'"';?>></input>
@@ -168,15 +176,34 @@
             <input type="submit" value="Transfer >> " class="butn my-btn my-black my-round my-padding-12" name="submit" style="margin-left: 10px;">
             </form>
         </div>
+
+        <div class="my-container my-padding my-center my-hide-large">
+            <form action="transfer.php" method="POST">
+                <input type="text" hidden name="sender" id="" <?php echo 'value="'.$acc1.'"';?>></input>
+                <input type="text" hidden name="receiver" id="" <?php echo 'value="'.$acc2.'"';?>></input>
+            Select Amount To Transfer: <input class="my-padding" type="number" name="amount" id="" min=0 <?php echo 'max="'.$balance.'"';?>>
+            <input type="submit" value="Transfer >> " class="butn my-btn my-black my-round my-padding-12" name="submit" style="margin-left: 10px;">
+            </form>
+            <br><br><br><br><br><br><br>
+        </div>
+
     </div>
 
     <div class="footer">
-        <p>
+        <p class="my-hide-small">
             This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o"></i> <span
                 class="my-small">abhigyanritiz63@gmail.com</span> &nbsp;&nbsp;&nbsp;&nbsp;<i
                 class="fa fa-linkedin-square"></i> <span class="my-small">www.linkedin.com/in/abhigyan-borah</span>
             &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> <span
                 class="my-small">https://github.com/AbhigyanBorah </span>
+        </p>
+
+        <p class="my-hide-large">
+            This website was made by: Abhigyan Borah <br><i class="fa fa-envelope-o" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">abhigyanritiz63@gmail.com</span> <br><i
+                class="fa fa-linkedin-square" style="font-size: 10px;"></i> <span style="font-size: 10px;">www.linkedin.com/in/abhigyan-borah</span>
+           <br> <i class="fa fa-github" style="font-size: 10px;"></i> <span
+                class="my-small" style="font-size: 10px;">https://github.com/AbhigyanBorah </span>
         </p>
 
     </div>
